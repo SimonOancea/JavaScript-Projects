@@ -1,4 +1,4 @@
-function my_Dictionary() {
+function my_Dictionary() { //THis is a KVP function
     var Animal={
         Species: "Cat",
         Color: "White",
