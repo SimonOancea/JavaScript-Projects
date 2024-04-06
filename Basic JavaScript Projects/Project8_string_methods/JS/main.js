@@ -25,4 +25,4 @@ function precision_method() {
     var myNumber = 123.4456789;
     document.getElementById("SpecificLength").innerHTML =
     myNumber.toPrecision(5);
-}
+} 
