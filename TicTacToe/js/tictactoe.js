@@ -2,13 +2,13 @@
 let activePlayer='X';
 
 //Array to store the moves
-let selectedSquares = [];
+let SelectedSquares = [];
 
 //Function to place x or o in a square
 function placeXOrO (squareNumber) {
 
     //check if the square has already been selected
-    if (!selectedSquares.some(element => element.includes (squareNumber))) {
+    if (!SelectedSquares.some(element => element.includes (squareNumber))) {
         //Variable to hold the HTML element that was clicked
         let select = document.getElementById(squareNumber);
         
@@ -20,7 +20,7 @@ function placeXOrO (squareNumber) {
         }
 
         //Add the square number and the player to the array
-        selectedSquares.push(squareNumber + activePlayer);
+        SelectedSquares.push(squareNumber + activePlayer);
 
         //Call the function to check if it exists a win
         checkWinConditions();
@@ -79,7 +79,7 @@ function checkWinConditions() {
         else if (arrayIncludes ('6O','4O','2O')) { drawWinLine(100, 508, 510, 90) }
         else if (arrayIncludes ('0O','4O','8O')) { drawWinLine(100, 100, 520, 520) }
         //check for a tie if no win conditions are met and 9 squares have been selected
-        else if (selectedSquares.length >= 9) {
+        else if (SelectedSquares.length >= 9) {
             // play the tie sound
             audio('./media/tie.mp3');
 
@@ -102,7 +102,7 @@ function resetGame() {
     let square = document.getElementById(String(i));
     square.style.backgroundImage = '';
     }
-    selectedSquares = [];
+    SelectedSquares = [];
 }
 
 //Play the audio files
