@@ -16,7 +16,7 @@ function placeXOrO (squareNumber) {
         if (activePlayer === 'X') {
             select.style.backgroundImage = 'url("images/x.png")';
         } else {
-        select.style.backgroundImage = 'url("images/o.png")';
+        select.style.backgroundImage = 'url("images/o.jpg")';
         }
 
         //Add the square number and the player to the array
@@ -27,7 +27,7 @@ function placeXOrO (squareNumber) {
 
         // Change the active player
         if (activePlayer === 'X') {
-            activePlayer = '0';
+            activePlayer = 'O';
         } else {
             activePlayer = 'X';
         }
@@ -36,7 +36,7 @@ function placeXOrO (squareNumber) {
         audio('./media/place.mp3');
 
         //Check if it's the computers turn
-        if (activePlayer === '0') {
+        if (activePlayer === 'O') {
             disableClick();
             setTimeout(function () { computersTurn(); }, 1000);
         }
