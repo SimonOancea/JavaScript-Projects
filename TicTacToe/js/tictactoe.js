@@ -45,7 +45,7 @@ function placeXOrO (squareNumber) {
         return true;
     }
 
-    //Pick a random square for the row of computers
+    //Pick a random square for computers turn
     function computersTurn() {
         let success = false;
         let pickASquare;
